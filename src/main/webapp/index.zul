@@ -1,0 +1,14 @@
+<zk>
+	<window 
+		viewModel="@id('vm')@init('com.iosvany.eanScanner.MyViewModel')"
+		validationMessages="@id('vmsgs')">
+		<vbox>
+		<barcode id="result" type="ean13" value="0000000000000" displayValue="true" height="100px" width="300px"/>
+		<label id="price" value="Gs 0" />
+		----
+		<barcodescanner type="ean" continuous="true" interval="1000" height="225px" width="300px"
+			onDetected='Clients.log(event.getType() + " " + event.getResult())' />
+		</vbox>
+		<button label="Simular leer 6935364050573" onClick='result.setValue("6935364050573");price.setValue("Gs 50.000");' />
+	</window>
+</zk>
