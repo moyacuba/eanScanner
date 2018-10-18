@@ -7,7 +7,7 @@
 		<label id="price" value="Gs 0" />
 		----
 		<barcodescanner type="ean" continuous="true" interval="1000" height="225px" width="300px"
-			onDetected='Clients.log(event.getType() + " " + event.getResult())' />
+			onDetected='result.setValue(event.getResult())' />
 		</vbox>
 		<button label="Simular leer 6935364050573" onClick='result.setValue("6935364050573");price.setValue("Gs 50.000");' />
 	</window>
