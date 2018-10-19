@@ -6,9 +6,9 @@
 		<barcode id="result" type="ean13" value="0000000000000" displayValue="true" height="100px" width="300px"/>
 		<label id="price" value="Gs 0" />
 		----
-		<barcodescanner type="ean" continuous="true" interval="1000" height="225px" width="300px"
-			onDetected='result.setValue(event.getResult())' />
+		<barcodescanner type="ean" continuous="true" interval="300" height="225px" width="300px"
+			onDetect='result.setValue(event.getResult());price.setValue("Gs 100,000");' />
 		</vbox>
-		<button label="Simular leer 6935364050573" onClick='result.setValue("6935364050573");price.setValue("Gs 50.000");' />
+		<button label="Reiniciar a 0000000000000" onClick='result.setValue("0000000000000");price.setValue("Gs 0");' />
 	</window>
 </zk>
